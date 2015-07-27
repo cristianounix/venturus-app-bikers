@@ -1,0 +1,37 @@
+$grid-increment = 100px;
+$grid-start = 70px;
+$grid-end = 1170px;
+$grid-columns = 12,
+
+$colors = {
+  'light_purple': #333,
+  'green': #369f0f,
+  'light_green': #154A02,
+  'white': #fff,
+  'light_gray': #999999,
+  'bk_1': #F4F4F4
+}
+
+
+generate-grid($increment, $start, $end){
+  $total = $start
+  for n, $x in 0..(($end - $start) / $increment){
+    .grid_{$x+1}{
+      width $total;
+      if $total >= $end{
+        margin-right 0;
+      }
+    }
+    $total = $total + $increment;
+  }
+}
+
+@require 'reset'
+@require 'grid'
+@require 'header'
+@require 'breadcrumb'
+@require 'page-sections'
+@require 'widget'
+@require 'forms'
+@require 'table'
+@require 'footer'

@@ -1,0 +1,25 @@
+{
+  "days": [
+    {
+      "name": "Sun"
+    },
+    {
+      "name": "Mon"
+    },
+    {
+      "name": "Tue"
+    },
+    {
+      "name": "Wed"
+    },
+    {
+      "name": "Thu"
+    },
+    {
+      "name": "Fri"
+    },
+    {
+      "name": "Sat"
+    }
+  ]
+}

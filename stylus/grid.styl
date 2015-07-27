@@ -1,0 +1,24 @@
+$grid
+  display: inline;
+  float: left;
+  position: relative;
+  margin-right: 30px;
+
+
+.container_{$grid-columns}{
+  margin-left auto;
+  margin-right auto;
+  width 1200px;
+  overflow hidden;
+}
+
+for $x in 1..$grid-columns{
+  .grid_{$x}{
+    @extend $grid
+  }
+}
+
+generate-grid($grid-increment, $grid-start, $grid-end)
+
+
+
