@@ -5,6 +5,7 @@ After clone this repo you will run:
 
 1. ```$ npm install```
 2. ```$ bower install```
+3. ```$ grunt build```
 
 Done, all dependencies was installed.
 
