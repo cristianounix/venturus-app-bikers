@@ -92,7 +92,7 @@
             $scope.bikers.push({
                 name: copyBiker.name,
                 email: copyBiker.email,
-                city: copyBiker.city == '' ? '---' : copyBiker.city,
+                city: copyBiker.city,
                 rideGroup: copyBiker.rideGroup,
                 daysOfWeek: daysOfWeek,
                 date: utils.createdDate()
