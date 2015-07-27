@@ -15,7 +15,6 @@
             var d = new Date();
             var hours = d.getHours();
             var ampm = (parseInt(hours) >= 12) ? "PM" : "AM";
-            console.log(ampm);
             return d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear() + " " + hours + ":" + d.getMinutes() + ampm;
         }
     };
@@ -60,7 +59,7 @@
         /**
          * Filter selected days
          */
-         $scope.daysChoosed = function() {
+        $scope.daysChoosed = function() { 
             var trues = $filter("filter")( $scope.days , {selected:true} );
             if (trues == undefined)
                 return false;
@@ -69,15 +68,16 @@
         function filterDay() {
             var daysData = $filter('filter')($scope.days, {
                 selected: true
-            });
+            }); 
         }
 
-        function getDaysOfWeek(){
+        function getDaysOfWeek(days){
             var daysOfWeek = [];
-            for (var i = 0; i < $scope.days.length; i++) {
+            for (var i = 0; i < days.length; i++) {
                 if ($scope.days[i].selected) {
-                    daysOfWeek.push($scope.days[i].name);
-                }
+                    daysOfWeek.push(days[i].name);
+                    $scope.days[i].selected = false;
+                } 
             }
             return daysOfWeek;
         }
@@ -99,10 +99,9 @@
             });
             $scope.input = {};
             copyBiker = null;
-            daysOfWeek = null;
+            daysOfWeek = null; 
             $scope.input.rideGroup = 'Always';
             $(".css-checkbox").attr("checked", false);
-            $("input.regular-radio:first").prop('checked', true);
             $('html, body').animate({scrollTop:1000},'50');
         };
 
